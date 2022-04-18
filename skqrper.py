@@ -30,10 +30,10 @@ def key_checker(keys, valid_file, no_valid_file, counter, our_len):
             #out = driver.find_element(By.CLASS_NAME,'cli_inlineErrorMessage').text
         except:
             out = "valid"
-        if out == "valid":
-            valid_file.write("{}/n".formatkey)
-        else:
-            no_valid_file.write(key)
+        if out == "valid":                                                                                                                                                                                         
+            valid_file.write("{}\n".format(key))                                                                                                                                                                   
+        else:                                                                                                                                                                                                      
+            no_valid_file.write("{}\n".format(key)
         if counter % num_keys_to_out == 0  or counter == len(keys):
             print("{} / {} ".format(counter, len(keys)))
         input_key.clear()
